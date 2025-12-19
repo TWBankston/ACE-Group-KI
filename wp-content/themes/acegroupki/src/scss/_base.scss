@@ -1,0 +1,21 @@
+// Base styles
+// Reset, typography defaults, WP block styles
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  color: $color-primary;
+  margin: 0;
+  padding: 0;
+}
+
+// WordPress block editor styles
+.wp-block {
+  max-width: 100%;
+}
+
