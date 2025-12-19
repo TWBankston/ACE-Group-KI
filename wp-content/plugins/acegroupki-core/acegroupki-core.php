@@ -55,7 +55,7 @@ add_action('plugins_loaded', 'acegroupki_core_init');
 function acegroupki_core_activate() {
     // Register CPT/taxonomies first so rewrite rules work
     $cpt_projects = new ACEGroupKI_CPT_Projects();
-    $cpt_projects->register_cpt();
+    $cpt_projects->register_post_type();
     
     $taxonomies = new ACEGroupKI_Taxonomies();
     $taxonomies->register_taxonomies();
