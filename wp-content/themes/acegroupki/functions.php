@@ -36,6 +36,15 @@ function acegroupki_setup() {
     add_theme_support('responsive-embeds');
     add_theme_support('align-wide');
 
+    // Add custom logo support
+    add_theme_support('custom-logo', array(
+        'height' => 100,
+        'width' => 400,
+        'flex-height' => true,
+        'flex-width' => true,
+        'header-text' => array('site-title', 'site-description'),
+    ));
+
     // Register navigation menus
     register_nav_menus(array(
         'primary' => __('Primary Menu', 'acegroupki'),

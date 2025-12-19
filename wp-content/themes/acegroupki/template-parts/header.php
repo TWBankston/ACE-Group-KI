@@ -25,13 +25,25 @@
                 if (has_custom_logo()) {
                     the_custom_logo();
                 } else {
-                    ?>
-                    <h1 class="site-title">
-                        <a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
-                            <?php bloginfo('name'); ?>
+                    // Default logo fallback
+                    $logo_path = get_template_directory() . '/assets/images/logo.png';
+                    if (file_exists($logo_path)) {
+                        ?>
+                        <a href="<?php echo esc_url(home_url('/')); ?>" class="custom-logo-link" rel="home">
+                            <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/logo.png'); ?>" 
+                                 alt="<?php echo esc_attr(get_bloginfo('name')); ?>" 
+                                 class="custom-logo">
                         </a>
-                    </h1>
-                    <?php
+                        <?php
+                    } else {
+                        ?>
+                        <h1 class="site-title">
+                            <a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
+                                <?php bloginfo('name'); ?>
+                            </a>
+                        </h1>
+                        <?php
+                    }
                 }
                 ?>
             </div>
