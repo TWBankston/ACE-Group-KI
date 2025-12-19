@@ -25,6 +25,7 @@ define('ACEGROUPKI_CORE_URI', plugin_dir_url(__FILE__));
 require_once ACEGROUPKI_CORE_DIR . 'includes/class-cpt-projects.php';
 require_once ACEGROUPKI_CORE_DIR . 'includes/class-taxonomies.php';
 require_once ACEGROUPKI_CORE_DIR . 'includes/class-site-settings.php';
+require_once ACEGROUPKI_CORE_DIR . 'includes/class-page-setup.php';
 
 /**
  * Initialize plugin
@@ -41,6 +42,28 @@ function acegroupki_core_init() {
     // Initialize Site Settings
     $site_settings = new ACEGroupKI_Site_Settings();
     $site_settings->init();
+
+    // Initialize Page Setup
+    $page_setup = new ACEGroupKI_Page_Setup();
+    $page_setup->init();
 }
 add_action('plugins_loaded', 'acegroupki_core_init');
+
+/**
+ * Plugin activation hook
+ */
+function acegroupki_core_activate() {
+    // Flush rewrite rules
+    flush_rewrite_rules();
+}
+register_activation_hook(__FILE__, 'acegroupki_core_activate');
+
+/**
+ * Plugin deactivation hook
+ */
+function acegroupki_core_deactivate() {
+    // Flush rewrite rules
+    flush_rewrite_rules();
+}
+register_deactivation_hook(__FILE__, 'acegroupki_core_deactivate');
 
