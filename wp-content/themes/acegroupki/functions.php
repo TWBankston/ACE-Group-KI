@@ -77,8 +77,8 @@ function acegroupki_enqueue_assets() {
     }
 
     // Enqueue main stylesheet
-    if (isset($manifest['src/js/main.js']['css']) && is_array($manifest['src/js/main.js']['css'])) {
-        foreach ($manifest['src/js/main.js']['css'] as $css_file) {
+    if (isset($manifest['js/main.js']['css']) && is_array($manifest['js/main.js']['css'])) {
+        foreach ($manifest['js/main.js']['css'] as $css_file) {
             wp_enqueue_style(
                 'acegroupki-main',
                 ACEGROUPKI_THEME_URI . '/dist/' . $css_file,
@@ -89,10 +89,10 @@ function acegroupki_enqueue_assets() {
     }
 
     // Enqueue main JavaScript
-    if (isset($manifest['src/js/main.js']['file'])) {
+    if (isset($manifest['js/main.js']['file'])) {
         wp_enqueue_script(
             'acegroupki-main',
-            ACEGROUPKI_THEME_URI . '/dist/' . $manifest['src/js/main.js']['file'],
+            ACEGROUPKI_THEME_URI . '/dist/' . $manifest['js/main.js']['file'],
             array(),
             ACEGROUPKI_VERSION,
             true
@@ -101,10 +101,10 @@ function acegroupki_enqueue_assets() {
 
     // Conditionally enqueue page-specific scripts
     if (is_front_page() || is_page_template('templates/template-home.php')) {
-        if (isset($manifest['src/js/home.js']['file'])) {
+        if (isset($manifest['js/home.js']['file'])) {
             wp_enqueue_script(
                 'acegroupki-home',
-                ACEGROUPKI_THEME_URI . '/dist/' . $manifest['src/js/home.js']['file'],
+                ACEGROUPKI_THEME_URI . '/dist/' . $manifest['js/home.js']['file'],
                 array('acegroupki-main'),
                 ACEGROUPKI_VERSION,
                 true
@@ -113,10 +113,10 @@ function acegroupki_enqueue_assets() {
     }
 
     if (is_post_type_archive('project') || is_page_template('templates/template-projects.php') || is_singular('project')) {
-        if (isset($manifest['src/js/projects.js']['file'])) {
+        if (isset($manifest['js/projects.js']['file'])) {
             wp_enqueue_script(
                 'acegroupki-projects',
-                ACEGROUPKI_THEME_URI . '/dist/' . $manifest['src/js/projects.js']['file'],
+                ACEGROUPKI_THEME_URI . '/dist/' . $manifest['js/projects.js']['file'],
                 array('acegroupki-main'),
                 ACEGROUPKI_VERSION,
                 true
