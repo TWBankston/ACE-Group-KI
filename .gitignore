@@ -6,10 +6,19 @@ vendor/
 wp-content/themes/acegroupki/dist/
 *.log
 
+# Deployment tools
+tools/WinSCPnet.dll
+tools/*.dll
+
 # Environment
 .env
 .env.local
 wp-config.php
+.gitignore.local
+deploy-config.local.*
+*credentials*
+*secrets*
+deploy-secrets.*
 
 # OS
 .DS_Store

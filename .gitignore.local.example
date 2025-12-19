@@ -1,0 +1,23 @@
+# Local deployment credentials (DO NOT COMMIT)
+# Copy this file to .gitignore.local and add your credentials
+# This file is ignored by git
+
+# Deployment credentials
+DEPLOY_HOST=172.233.152.148
+DEPLOY_PORT=2222
+DEPLOY_USER=staging_acegroupki
+DEPLOY_PASS=yQF6OeORfCvgbN6M
+DEPLOY_PATH=/www/wp-content
+
+# Database credentials (for reference only, not used in deployment)
+DB_URL=https://db-jacobtyler2.wordkeeper.net/
+DB_USER=staging_acegroupki
+DB_PASS=ZDZDTZsES0RHUB6x
+
+# WordPress credentials (for reference only)
+WP_USER=acegroupki
+WP_PASS=R1ptNxd017E0CURI
+
+# SSH Key path
+SSH_KEY_PATH=C:\Users\Tyler\.ssh\acegroupki_website_ed25519
+

@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services - Ace Group KI</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+body { font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
+</style></head>
+<body class="bg-slate-50 text-slate-900">
+
+    <!-- Navigation (Consistent) -->
+    <header class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <!-- Logo area -->
+            <a href="index.html" class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-slate-900 rounded-lg flex items-center justify-center text-white">
+                    <i data-lucide="triangle" class="w-6 h-6 fill-white"></i>
+                </div>
+                <div class="leading-none">
+                    <span class="block text-lg font-semibold tracking-tight text-slate-900">ACE GROUP KI</span>
+                    <span class="block text-xs font-medium text-slate-500 tracking-wide uppercase">Construction</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center gap-8">
+                <a href="#" class="text-sm font-medium text-slate-600 hover:text-blue-700 transition-colors">Home</a>
+                <a href="#" class="text-sm font-medium text-slate-600 hover:text-blue-700 transition-colors">About</a>
+                <a href="#" class="text-sm font-medium text-blue-700 transition-colors">Services</a>
+                <a href="#" class="text-sm font-medium text-slate-600 hover:text-blue-700 transition-colors">Projects</a>
+            </nav>
+
+            <!-- CTA -->
+            <div class="hidden md:flex items-center gap-4">
+                <button class="text-slate-500 hover:text-slate-900 transition-colors">
+                    <i data-lucide="search" class="w-5 h-5"></i>
+                </button>
+                <a href="#contact" class="bg-blue-700 hover:bg-blue-800 text-white text-sm font-medium px-5 py-2.5 rounded-lg transition-all shadow-sm shadow-blue-200">
+                    Get in Touch
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="md:hidden text-slate-900">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Page Header / Hero -->
+    <section class="relative pt-40 pb-20 bg-white border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 border border-slate-200 text-slate-600 text-xs font-medium uppercase tracking-wider mb-6">
+                    What We Do
+                </div>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-semibold text-slate-900 tracking-tight mb-6 leading-[1.1]">
+                    Comprehensive solutions <br class="hidden md:block"> <span class="text-slate-400">for complex projects.</span>
+                </h1>
+                <p class="text-lg md:text-xl text-slate-600 font-light leading-relaxed max-w-2xl">
+                    From ground-up commercial builds to high-end residential renovations, we deliver precision construction management tailored to your specific needs.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Service Areas -->
+    <section class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-8">
+                
+                <!-- Commercial -->
+                <div class="group bg-white p-8 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all duration-300">
+                    <div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center text-blue-700 mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="building-2" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-slate-900 tracking-tight mb-4">Commercial Construction</h3>
+                    <p class="text-slate-600 mb-8 leading-relaxed">
+                        We specialize in office build-outs, retail spaces, and mixed-use developments. Our team minimizes downtime and maximizes efficiency to get your business running.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3 text-sm text-slate-700 font-medium">
+                            <i data-lucide="check" class="w-4 h-4 text-blue-700"></i> Tenant Improvements
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-slate-700 font-medium">
+                            <i data-lucide="check" class="w-4 h-4 text-blue-700"></i> Retail &amp; Hospitality
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-slate-700 font-medium">
+                            <i data-lucide="check" class="w-4 h-4 text-blue-700"></i> Office Build-outs
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Residential -->
+                <div class="group bg-white p-8 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all duration-300">
+                    <div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center text-blue-700 mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="home" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-slate-900 tracking-tight mb-4">Residential Development</h3>
+                    <p class="text-slate-600 mb-8 leading-relaxed">
+                        Building dream homes with an emphasis on architectural integrity and sustainable materials. We handle everything from new construction to complex additions.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3 text-sm text-slate-700 font-medium">
+                            <i data-lucide="check" class="w-4 h-4 text-blue-700"></i> Custom New Homes
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-slate-700 font-medium">
+                            <i data-lucide="check" class="w-4 h-4 text-blue-700"></i> Multi-Unit Dwellings
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-slate-700 font-medium">
+                            <i data-lucide="check" class="w-4 h-4 text-blue-700"></i> ADU Construction
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Remodeling -->
+                <div class="group bg-white p-8 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all duration-300">
+                    <div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center text-blue-700 mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="hammer" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-slate-900 tracking-tight mb-4">Renovation &amp; Remodeling</h3>
+                    <p class="text-slate-600 mb-8 leading-relaxed">
+                        Transforming existing spaces into modern, functional environments. We specialize in high-end kitchen remodels, bathroom updates, and structural alterations.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3 text-sm text-slate-700 font-medium">
+                            <i data-lucide="check" class="w-4 h-4 text-blue-700"></i> Full Home Remodels
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-slate-700 font-medium">
+                            <i data-lucide="check" class="w-4 h-4 text-blue-700"></i> Kitchen &amp; Bath
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-slate-700 font-medium">
+                            <i data-lucide="check" class="w-4 h-4 text-blue-700"></i> Structural Reinforcement
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- General Contracting -->
+                <div class="group bg-white p-8 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all duration-300">
+                    <div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center text-blue-700 mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="clipboard-list" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-slate-900 tracking-tight mb-4">General Contracting</h3>
+                    <p class="text-slate-600 mb-8 leading-relaxed">
+                        End-to-end project management. We coordinate architects, engineers, and subcontractors to ensure your project stays on timeline and within budget.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3 text-sm text-slate-700 font-medium">
+                            <i data-lucide="check" class="w-4 h-4 text-blue-700"></i> Permitting &amp; Compliance
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-slate-700 font-medium">
+                            <i data-lucide="check" class="w-4 h-4 text-blue-700"></i> Cost Estimation
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-slate-700 font-medium">
+                            <i data-lucide="check" class="w-4 h-4 text-blue-700"></i> Site Supervision
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Specific Capabilities / Grid -->
+    <section class="py-24 bg-white border-y border-slate-200">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="mb-16">
+                <h2 class="text-3xl font-semibold text-slate-900 tracking-tight mb-4">Technical Capabilities</h2>
+                <p class="text-lg text-slate-600 max-w-2xl">Our in-house team and trusted partners cover every aspect of the build process.</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-12">
+                <!-- Cap 1 -->
+                <div class="space-y-3">
+                    <i data-lucide="component" class="w-6 h-6 text-slate-400"></i>
+                    <h4 class="font-semibold text-slate-900">Concrete &amp; Masonry</h4>
+                    <p class="text-sm text-slate-500 leading-relaxed">Foundations, driveways, retaining walls, and architectural concrete.</p>
+                </div>
+                <!-- Cap 2 -->
+                <div class="space-y-3">
+                    <i data-lucide="frame" class="w-6 h-6 text-slate-400"></i>
+                    <h4 class="font-semibold text-slate-900">Framing &amp; Drywall</h4>
+                    <p class="text-sm text-slate-500 leading-relaxed">Structural wood and steel framing, precision drywall installation.</p>
+                </div>
+                <!-- Cap 3 -->
+                <div class="space-y-3">
+                    <i data-lucide="zap" class="w-6 h-6 text-slate-400"></i>
+                    <h4 class="font-semibold text-slate-900">MEP Services</h4>
+                    <p class="text-sm text-slate-500 leading-relaxed">Full coordination of Mechanical, Electrical, and Plumbing systems.</p>
+                </div>
+                <!-- Cap 4 -->
+                <div class="space-y-3">
+                    <i data-lucide="paint-bucket" class="w-6 h-6 text-slate-400"></i>
+                    <h4 class="font-semibold text-slate-900">Finishing</h4>
+                    <p class="text-sm text-slate-500 leading-relaxed">High-end millwork, flooring, tiling, and exterior finishing.</p>
+                </div>
+                <!-- Cap 5 -->
+                <div class="space-y-3">
+                    <i data-lucide="trees" class="w-6 h-6 text-slate-400"></i>
+                    <h4 class="font-semibold text-slate-900">Landscaping</h4>
+                    <p class="text-sm text-slate-500 leading-relaxed">Hardscaping, irrigation systems, decks, and outdoor living spaces.</p>
+                </div>
+                <!-- Cap 6 -->
+                <div class="space-y-3">
+                    <i data-lucide="wrench" class="w-6 h-6 text-slate-400"></i>
+                    <h4 class="font-semibold text-slate-900">Maintenance</h4>
+                    <p class="text-sm text-slate-500 leading-relaxed">Commercial facility maintenance and scheduled residential upkeep.</p>
+                </div>
+                <!-- Cap 7 -->
+                <div class="space-y-3">
+                    <i data-lucide="file-check" class="w-6 h-6 text-slate-400"></i>
+                    <h4 class="font-semibold text-slate-900">Permitting</h4>
+                    <p class="text-sm text-slate-500 leading-relaxed">Handling city inspections, permits, and zoning requirements.</p>
+                </div>
+                <!-- Cap 8 -->
+                <div class="space-y-3">
+                    <i data-lucide="hard-hat" class="w-6 h-6 text-slate-400"></i>
+                    <h4 class="font-semibold text-slate-900">Demolition</h4>
+                    <p class="text-sm text-slate-500 leading-relaxed">Safe site clearing, interior demolition, and debris removal.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Process -->
+    <section class="py-24 bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-semibold tracking-tight mb-6">How we work.</h2>
+                    <p class="text-lg text-slate-400 leading-relaxed mb-8">
+                        Construction is complex, but our process is simple. We believe in transparency and communication at every phase of the project lifecycle.
+                    </p>
+                    
+                    <div class="space-y-8 relative">
+                        <!-- Connecting Line -->
+                        <div class="absolute left-6 top-4 bottom-4 w-px bg-slate-700"></div>
+
+                        <!-- Step 1 -->
+                        <div class="relative flex gap-6">
+                            <div class="w-12 h-12 rounded-full bg-blue-600 border-4 border-slate-900 flex items-center justify-center shrink-0 z-10 font-semibold text-white">1</div>
+                            <div class="pt-2">
+                                <h4 class="text-xl font-medium text-white mb-2">Consultation &amp; Estimation</h4>
+                                <p class="text-slate-400 text-sm leading-relaxed">We meet to discuss your vision, inspect the site, and provide a detailed, transparent cost estimate.</p>
+                            </div>
+                        </div>
+
+                        <!-- Step 2 -->
+                        <div class="relative flex gap-6">
+                            <div class="w-12 h-12 rounded-full bg-slate-800 border-4 border-slate-900 flex items-center justify-center shrink-0 z-10 font-semibold text-slate-400">2</div>
+                            <div class="pt-2">
+                                <h4 class="text-xl font-medium text-white mb-2">Planning &amp; Permitting</h4>
+                                <p class="text-slate-400 text-sm leading-relaxed">Our team handles the logistics, securing necessary permits and finalizing architectural plans.</p>
+                            </div>
+                        </div>
+
+                        <!-- Step 3 -->
+                        <div class="relative flex gap-6">
+                            <div class="w-12 h-12 rounded-full bg-slate-800 border-4 border-slate-900 flex items-center justify-center shrink-0 z-10 font-semibold text-slate-400">3</div>
+                            <div class="pt-2">
+                                <h4 class="text-xl font-medium text-white mb-2">Construction Phase</h4>
+                                <p class="text-slate-400 text-sm leading-relaxed">The build begins. You receive regular updates through our dedicated project management portal.</p>
+                            </div>
+                        </div>
+
+                        <!-- Step 4 -->
+                        <div class="relative flex gap-6">
+                            <div class="w-12 h-12 rounded-full bg-slate-800 border-4 border-slate-900 flex items-center justify-center shrink-0 z-10 font-semibold text-slate-400">4</div>
+                            <div class="pt-2">
+                                <h4 class="text-xl font-medium text-white mb-2">Final Walkthrough</h4>
+                                <p class="text-slate-400 text-sm leading-relaxed">We conduct a rigorous quality assurance check before handing over the keys to your new space.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image -->
+                <div class="relative h-full min-h-[500px] rounded-xl overflow-hidden border border-slate-700 group">
+                    <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&amp;w=1000&amp;auto=format&amp;fit=crop" alt="Construction Blueprints" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-opacity duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent"></div>
+                    <div class="absolute bottom-8 left-8 right-8">
+                        <div class="bg-slate-800/80 backdrop-blur p-6 rounded-lg border border-slate-600">
+                            <i data-lucide="quote" class="w-8 h-8 text-blue-400 mb-4"></i>
+                            <p class="text-slate-200 italic">"The level of detail Ace Group KI brought to our office renovation was unmatched. They finished two weeks ahead of schedule."</p>
+                            <div class="mt-4 text-sm font-semibold text-white">— Michael T., Commercial Client</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer & Contact (Consistent) -->
+    <footer id="contact" class="bg-slate-900 text-white">
+        <!-- Call to Action Banner -->
+        <div class="bg-blue-700">
+            <div class="max-w-7xl mx-auto px-6 py-12 md:py-16 flex flex-col md:flex-row items-center justify-between gap-6">
+                <div>
+                    <h3 class="text-2xl md:text-3xl font-semibold tracking-tight mb-2">Start your project today.</h3>
+                    <p class="text-blue-100 text-lg">Reach out to discuss your specific construction needs.</p>
+                </div>
+                <a href="mailto:imran@acegroupki.com" class="px-8 py-3 bg-white text-blue-700 font-medium rounded-lg hover:bg-slate-50 transition-colors shadow-lg">
+                    Get a Quote
+                </a>
+            </div>
+        </div>
+
+        <!-- Main Footer Content -->
+        <div class="max-w-7xl mx-auto px-6 py-20">
+            <div class="grid lg:grid-cols-2 gap-16">
+                <!-- Map Area -->
+                <div class="relative w-full h-80 rounded-xl overflow-hidden border border-slate-700 grayscale hover:grayscale-0 transition-all duration-500">
+                     <!-- Static Map Placeholder Image -->
+                    <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&amp;w=1774&amp;auto=format&amp;fit=crop" alt="Map Location" class="w-full h-full object-cover">
+                    <div class="absolute bottom-4 left-4 bg-white text-slate-900 p-4 rounded shadow-lg max-w-xs">
+                        <p class="font-semibold text-sm">Ace Group KI LLC</p>
+                        <p class="text-xs text-slate-500">Serving Greater San Diego Area</p>
+                    </div>
+                </div>
+
+                <!-- Contact Details -->
+                <div class="space-y-12">
+                    <div>
+                        <h4 class="text-3xl font-semibold tracking-tight mb-8">Get in touch.</h4>
+                        <div class="space-y-8">
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded bg-slate-800 flex items-center justify-center shrink-0">
+                                    <i data-lucide="map-pin" class="w-5 h-5 text-blue-400"></i>
+                                </div>
+                                <div>
+                                    <p class="text-lg font-medium text-white">San Diego, CA</p>
+                                    <p class="text-slate-400 text-lg">Serving Commercial &amp; Residential Clients</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded bg-slate-800 flex items-center justify-center shrink-0">
+                                    <i data-lucide="phone" class="w-5 h-5 text-blue-400"></i>
+                                </div>
+                                <div>
+                                    <p class="text-lg font-medium text-white">Call us.</p>
+                                    <p class="text-slate-400 text-lg">703.870.5360</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded bg-slate-800 flex items-center justify-center shrink-0">
+                                    <i data-lucide="mail" class="w-5 h-5 text-blue-400"></i>
+                                </div>
+                                <div>
+                                    <p class="text-lg font-medium text-white">Email us.</p>
+                                    <a href="mailto:imran@acegroupki.com" class="text-slate-400 hover:text-white transition-colors text-lg">imran@acegroupki.com</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="mt-20 pt-8 border-t border-slate-800 flex flex-col md:flex-row items-center justify-between gap-4">
+                <p class="text-slate-500 text-sm">© 2024 Ace Group KI LLC. All rights reserved.</p>
+                <div class="flex gap-6">
+                    <a href="#" class="text-slate-500 hover:text-white transition-colors"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+                    <a href="#" class="text-slate-500 hover:text-white transition-colors"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+                    <a href="#" class="text-slate-500 hover:text-white transition-colors"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+
+</body></html>

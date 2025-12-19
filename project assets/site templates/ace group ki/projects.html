@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects - Ace Group KI</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+body { font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
+.hide-scrollbar::-webkit-scrollbar { display: none; }
+.hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+</style></head>
+<body class="bg-slate-50 text-slate-900">
+
+    <!-- Navigation -->
+    <header class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-slate-900 rounded-lg flex items-center justify-center text-white">
+                    <i data-lucide="triangle" class="w-6 h-6 fill-white"></i>
+                </div>
+                <div class="leading-none">
+                    <span class="block text-lg font-semibold tracking-tight text-slate-900">ACE GROUP KI</span>
+                    <span class="block text-xs font-medium text-slate-500 tracking-wide uppercase">Construction</span>
+                </div>
+            </a>
+
+            <nav class="hidden md:flex items-center gap-8">
+                <a href="#" class="text-sm font-medium text-slate-600 hover:text-blue-700 transition-colors">Home</a>
+                <a href="#" class="text-sm font-medium text-slate-600 hover:text-blue-700 transition-colors">About</a>
+                <a href="#" class="text-sm font-medium text-slate-600 hover:text-blue-700 transition-colors">Services</a>
+                <a href="#" class="text-sm font-medium text-blue-700 transition-colors">Projects</a>
+            </nav>
+
+            <div class="hidden md:flex items-center gap-4">
+                <button class="text-slate-500 hover:text-slate-900 transition-colors">
+                    <i data-lucide="search" class="w-5 h-5"></i>
+                </button>
+                <a href="#contact" class="bg-blue-700 hover:bg-blue-800 text-white text-sm font-medium px-5 py-2.5 rounded-lg transition-all shadow-sm shadow-blue-200">
+                    Get in Touch
+                </a>
+            </div>
+
+            <button class="md:hidden text-slate-900">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative pt-40 pb-16 bg-white border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-8">
+                <div class="max-w-3xl">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 border border-slate-200 text-slate-600 text-xs font-medium uppercase tracking-wider mb-6">
+                        Our Portfolio
+                    </div>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-semibold text-slate-900 tracking-tight mb-6 leading-[1.1]">
+                        Building the future, <br class="hidden md:block"> <span class="text-slate-400">one project at a time.</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-slate-600 font-light leading-relaxed max-w-2xl">
+                        Explore a selection of our recent work, ranging from commercial developments to bespoke residential renovations in the Greater San Diego area.
+                    </p>
+                </div>
+                
+                <!-- Quick Stats -->
+                <div class="flex gap-8 md:gap-12 pb-2">
+                    <div>
+                        <div class="text-3xl font-semibold text-slate-900 tracking-tight">150+</div>
+                        <div class="text-sm text-slate-500 mt-1">Projects Completed</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-semibold text-slate-900 tracking-tight">15<span class="text-blue-700">y</span></div>
+                        <div class="text-sm text-slate-500 mt-1">Years Experience</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Bar -->
+    <div class="sticky top-20 z-40 bg-slate-50/95 backdrop-blur border-b border-slate-200 py-4">
+        <div class="max-w-7xl mx-auto px-6 overflow-x-auto hide-scrollbar">
+            <div class="flex items-center gap-2 min-w-max">
+                <button class="px-4 py-2 bg-slate-900 text-white text-sm font-medium rounded-full shadow-sm">All Projects</button>
+                <button class="px-4 py-2 bg-white text-slate-600 border border-slate-200 hover:border-slate-300 hover:text-slate-900 text-sm font-medium rounded-full transition-all">Commercial</button>
+                <button class="px-4 py-2 bg-white text-slate-600 border border-slate-200 hover:border-slate-300 hover:text-slate-900 text-sm font-medium rounded-full transition-all">Residential</button>
+                <button class="px-4 py-2 bg-white text-slate-600 border border-slate-200 hover:border-slate-300 hover:text-slate-900 text-sm font-medium rounded-full transition-all">Renovation</button>
+                <button class="px-4 py-2 bg-white text-slate-600 border border-slate-200 hover:border-slate-300 hover:text-slate-900 text-sm font-medium rounded-full transition-all">Industrial</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Projects Grid -->
+    <section class="py-16 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Project 1 -->
+                <div class="group flex flex-col bg-white rounded-xl overflow-hidden border border-slate-200 hover:border-slate-300 transition-all hover:shadow-lg duration-300">
+                    <div class="relative h-64 overflow-hidden">
+                        <div class="absolute inset-0 bg-slate-900/10 group-hover:bg-transparent transition-colors z-10"></div>
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&amp;w=2070&amp;auto=format&amp;fit=crop" alt="High Rise" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute top-4 right-4 z-20">
+                            <span class="px-3 py-1 bg-white/90 backdrop-blur text-xs font-semibold text-slate-900 rounded-md uppercase tracking-wider">Commercial</span>
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="mb-4">
+                            <h3 class="text-xl font-semibold text-slate-900 tracking-tight group-hover:text-blue-700 transition-colors">Skyline Office Complex</h3>
+                            <p class="text-sm text-slate-500 mt-1 flex items-center gap-1">
+                                <i data-lucide="map-pin" class="w-3 h-3"></i> Downtown San Diego
+                            </p>
+                        </div>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6 line-clamp-3">
+                            A complete interior build-out for a 12-story commercial tower, featuring open-concept workspaces and high-end conference facilities.
+                        </p>
+                        <div class="mt-auto pt-6 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-xs font-medium text-slate-400">Completed 2023</span>
+                            <a href="#" class="text-sm font-medium text-blue-700 flex items-center gap-1 group/link">
+                                View Details <i data-lucide="arrow-right" class="w-4 h-4 group-hover/link:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="group flex flex-col bg-white rounded-xl overflow-hidden border border-slate-200 hover:border-slate-300 transition-all hover:shadow-lg duration-300">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1600596542815-e32c8ec22dc2?q=80&amp;w=2070&amp;auto=format&amp;fit=crop" alt="Modern House" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute top-4 right-4 z-20">
+                            <span class="px-3 py-1 bg-white/90 backdrop-blur text-xs font-semibold text-slate-900 rounded-md uppercase tracking-wider">Residential</span>
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="mb-4">
+                            <h3 class="text-xl font-semibold text-slate-900 tracking-tight group-hover:text-blue-700 transition-colors">The Highland Residence</h3>
+                            <p class="text-sm text-slate-500 mt-1 flex items-center gap-1">
+                                <i data-lucide="map-pin" class="w-3 h-3"></i> La Jolla, CA
+                            </p>
+                        </div>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6 line-clamp-3">
+                            Ground-up construction of a 4,500 sq ft modern luxury home featuring cantilevered decks and sustainable materials throughout.
+                        </p>
+                        <div class="mt-auto pt-6 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-xs font-medium text-slate-400">Completed 2023</span>
+                            <a href="#" class="text-sm font-medium text-blue-700 flex items-center gap-1 group/link">
+                                View Details <i data-lucide="arrow-right" class="w-4 h-4 group-hover/link:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="group flex flex-col bg-white rounded-xl overflow-hidden border border-slate-200 hover:border-slate-300 transition-all hover:shadow-lg duration-300">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1556912173-3db996ea8c3f?q=80&amp;w=2070&amp;auto=format&amp;fit=crop" alt="Kitchen Remodel" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute top-4 right-4 z-20">
+                            <span class="px-3 py-1 bg-white/90 backdrop-blur text-xs font-semibold text-slate-900 rounded-md uppercase tracking-wider">Renovation</span>
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="mb-4">
+                            <h3 class="text-xl font-semibold text-slate-900 tracking-tight group-hover:text-blue-700 transition-colors">Mid-Century Kitchen</h3>
+                            <p class="text-sm text-slate-500 mt-1 flex items-center gap-1">
+                                <i data-lucide="map-pin" class="w-3 h-3"></i> North Park
+                            </p>
+                        </div>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6 line-clamp-3">
+                            A complete gut renovation of a dated kitchen, introducing custom millwork, structural beam reinforcement, and smart appliances.
+                        </p>
+                        <div class="mt-auto pt-6 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-xs font-medium text-slate-400">Completed 2022</span>
+                            <a href="#" class="text-sm font-medium text-blue-700 flex items-center gap-1 group/link">
+                                View Details <i data-lucide="arrow-right" class="w-4 h-4 group-hover/link:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="group flex flex-col bg-white rounded-xl overflow-hidden border border-slate-200 hover:border-slate-300 transition-all hover:shadow-lg duration-300">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1595846519845-68e298c2edd8?q=80&amp;w=2070&amp;auto=format&amp;fit=crop" alt="Warehouse" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute top-4 right-4 z-20">
+                            <span class="px-3 py-1 bg-white/90 backdrop-blur text-xs font-semibold text-slate-900 rounded-md uppercase tracking-wider">Industrial</span>
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="mb-4">
+                            <h3 class="text-xl font-semibold text-slate-900 tracking-tight group-hover:text-blue-700 transition-colors">Logistics Hub</h3>
+                            <p class="text-sm text-slate-500 mt-1 flex items-center gap-1">
+                                <i data-lucide="map-pin" class="w-3 h-3"></i> Otay Mesa
+                            </p>
+                        </div>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6 line-clamp-3">
+                            Construction of a 20,000 sq ft distribution center, including reinforced concrete flooring and automated loading dock systems.
+                        </p>
+                        <div class="mt-auto pt-6 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-xs font-medium text-slate-400">Completed 2023</span>
+                            <a href="#" class="text-sm font-medium text-blue-700 flex items-center gap-1 group/link">
+                                View Details <i data-lucide="arrow-right" class="w-4 h-4 group-hover/link:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="group flex flex-col bg-white rounded-xl overflow-hidden border border-slate-200 hover:border-slate-300 transition-all hover:shadow-lg duration-300">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1574359411659-15573a21b369?q=80&amp;w=2070&amp;auto=format&amp;fit=crop" alt="Retail" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute top-4 right-4 z-20">
+                            <span class="px-3 py-1 bg-white/90 backdrop-blur text-xs font-semibold text-slate-900 rounded-md uppercase tracking-wider">Retail</span>
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="mb-4">
+                            <h3 class="text-xl font-semibold text-slate-900 tracking-tight group-hover:text-blue-700 transition-colors">Aura Boutique</h3>
+                            <p class="text-sm text-slate-500 mt-1 flex items-center gap-1">
+                                <i data-lucide="map-pin" class="w-3 h-3"></i> Little Italy
+                            </p>
+                        </div>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6 line-clamp-3">
+                            High-end retail fit-out with custom lighting grids, polished concrete floors, and bespoke display cabinetry.
+                        </p>
+                        <div class="mt-auto pt-6 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-xs font-medium text-slate-400">Completed 2022</span>
+                            <a href="#" class="text-sm font-medium text-blue-700 flex items-center gap-1 group/link">
+                                View Details <i data-lucide="arrow-right" class="w-4 h-4 group-hover/link:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="group flex flex-col bg-white rounded-xl overflow-hidden border border-slate-200 hover:border-slate-300 transition-all hover:shadow-lg duration-300">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1591129841117-3adfd313e34f?q=80&amp;w=2070&amp;auto=format&amp;fit=crop" alt="Outdoor" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute top-4 right-4 z-20">
+                            <span class="px-3 py-1 bg-white/90 backdrop-blur text-xs font-semibold text-slate-900 rounded-md uppercase tracking-wider">Landscape</span>
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="mb-4">
+                            <h3 class="text-xl font-semibold text-slate-900 tracking-tight group-hover:text-blue-700 transition-colors">Sunset Cliffs Hardscape</h3>
+                            <p class="text-sm text-slate-500 mt-1 flex items-center gap-1">
+                                <i data-lucide="map-pin" class="w-3 h-3"></i> Point Loma
+                            </p>
+                        </div>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6 line-clamp-3">
+                            Complex retaining wall engineering, paver installation, and drought-tolerant landscaping for a cliffside property.
+                        </p>
+                        <div class="mt-auto pt-6 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-xs font-medium text-slate-400">Completed 2023</span>
+                            <a href="#" class="text-sm font-medium text-blue-700 flex items-center gap-1 group/link">
+                                View Details <i data-lucide="arrow-right" class="w-4 h-4 group-hover/link:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="mt-16 text-center">
+                <button class="inline-flex items-center gap-2 px-6 py-3 border border-slate-200 text-slate-600 text-sm font-medium rounded-lg hover:border-slate-400 hover:text-slate-900 transition-colors bg-white">
+                    Load More Projects <i data-lucide="chevron-down" class="w-4 h-4"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Case Study -->
+    <section class="py-24 bg-white border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="order-2 lg:order-1">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-100 text-blue-700 text-xs font-medium uppercase tracking-wider mb-6">
+                        Case Study
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-semibold text-slate-900 tracking-tight mb-6">
+                        Revitalizing the Harbor District
+                    </h2>
+                    <p class="text-slate-600 text-lg leading-relaxed mb-8">
+                        The Ace Group team undertook a massive renovation of a historic 1920s warehouse, transforming it into a modern mixed-use facility while preserving its original brick facade and industrial character.
+                    </p>
+                    
+                    <div class="space-y-6 mb-8">
+                        <div class="flex gap-4">
+                            <div class="w-12 h-12 shrink-0 bg-slate-50 rounded-full flex items-center justify-center border border-slate-100">
+                                <i data-lucide="alert-circle" class="w-5 h-5 text-slate-700"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-semibold text-slate-900 mb-1">The Challenge</h4>
+                                <p class="text-sm text-slate-500 leading-relaxed">Structural instability in the foundation and outdated electrical systems required extensive remediation before design work could begin.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="w-12 h-12 shrink-0 bg-slate-50 rounded-full flex items-center justify-center border border-slate-100">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 text-blue-700"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-semibold text-slate-900 mb-1">The Solution</h4>
+                                <p class="text-sm text-slate-500 leading-relaxed">We implemented seismic retrofitting and installed energy-efficient HVAC systems, delivering the project 3 weeks ahead of schedule.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="#" class="inline-flex items-center justify-center px-6 py-3 bg-slate-900 text-white font-medium text-sm rounded-lg hover:bg-slate-800 transition-colors shadow-sm">
+                        Read Full Case Study
+                    </a>
+                </div>
+
+                <div class="order-1 lg:order-2 relative h-[500px] rounded-2xl overflow-hidden shadow-2xl shadow-slate-200">
+                    <img src="https://images.unsplash.com/photo-1555636222-cae831e670b3?q=80&amp;w=2077&amp;auto=format&amp;fit=crop" alt="Case Study Interior" class="absolute inset-0 w-full h-full object-cover">
+                    <div class="absolute bottom-6 right-6 flex gap-2">
+                        <button class="w-10 h-10 bg-white/90 backdrop-blur hover:bg-white rounded-full flex items-center justify-center shadow-lg transition-colors text-slate-900">
+                            <i data-lucide="arrow-left" class="w-5 h-5"></i>
+                        </button>
+                        <button class="w-10 h-10 bg-white/90 backdrop-blur hover:bg-white rounded-full flex items-center justify-center shadow-lg transition-colors text-slate-900">
+                            <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <footer id="contact" class="bg-slate-900 text-white">
+        <!-- Call to Action Banner -->
+        <div class="bg-blue-700">
+            <div class="max-w-7xl mx-auto px-6 py-12 md:py-16 flex flex-col md:flex-row items-center justify-between gap-6">
+                <div>
+                    <h3 class="text-2xl md:text-3xl font-semibold tracking-tight mb-2">Have a vision in mind?</h3>
+                    <p class="text-blue-100 text-lg">Let's discuss how we can bring your project to life.</p>
+                </div>
+                <a href="mailto:imran@acegroupki.com" class="px-8 py-3 bg-white text-blue-700 font-medium rounded-lg hover:bg-slate-50 transition-colors shadow-lg">
+                    Get a Quote
+                </a>
+            </div>
+        </div>
+
+        <!-- Main Footer Content -->
+        <div class="max-w-7xl mx-auto px-6 py-20">
+            <div class="grid lg:grid-cols-2 gap-16">
+                <!-- Map Area -->
+                <div class="relative w-full h-80 rounded-xl overflow-hidden border border-slate-700 grayscale hover:grayscale-0 transition-all duration-500">
+                     <!-- Static Map Placeholder Image -->
+                    <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&amp;w=1774&amp;auto=format&amp;fit=crop" alt="Map Location" class="w-full h-full object-cover">
+                    <div class="absolute bottom-4 left-4 bg-white text-slate-900 p-4 rounded shadow-lg max-w-xs">
+                        <p class="font-semibold text-sm">Ace Group KI LLC</p>
+                        <p class="text-xs text-slate-500">Serving Greater San Diego Area</p>
+                    </div>
+                </div>
+
+                <!-- Contact Details -->
+                <div class="space-y-12">
+                    <div>
+                        <h4 class="text-3xl font-semibold tracking-tight mb-8">Get in touch.</h4>
+                        <div class="space-y-8">
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded bg-slate-800 flex items-center justify-center shrink-0">
+                                    <i data-lucide="map-pin" class="w-5 h-5 text-blue-400"></i>
+                                </div>
+                                <div>
+                                    <p class="text-lg font-medium text-white">San Diego, CA</p>
+                                    <p class="text-slate-400 text-lg">Serving Commercial &amp; Residential Clients</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded bg-slate-800 flex items-center justify-center shrink-0">
+                                    <i data-lucide="phone" class="w-5 h-5 text-blue-400"></i>
+                                </div>
+                                <div>
+                                    <p class="text-lg font-medium text-white">Call us.</p>
+                                    <p class="text-slate-400 text-lg">703.870.5360</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded bg-slate-800 flex items-center justify-center shrink-0">
+                                    <i data-lucide="mail" class="w-5 h-5 text-blue-400"></i>
+                                </div>
+                                <div>
+                                    <p class="text-lg font-medium text-white">Email us.</p>
+                                    <a href="mailto:imran@acegroupki.com" class="text-slate-400 hover:text-white transition-colors text-lg">imran@acegroupki.com</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="mt-20 pt-8 border-t border-slate-800 flex flex-col md:flex-row items-center justify-between gap-4">
+                <p class="text-slate-500 text-sm">© 2024 Ace Group KI LLC. All rights reserved.</p>
+                <div class="flex gap-6">
+                    <a href="#" class="text-slate-500 hover:text-white transition-colors"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+                    <a href="#" class="text-slate-500 hover:text-white transition-colors"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+                    <a href="#" class="text-slate-500 hover:text-white transition-colors"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+
+</body></html>

@@ -1,0 +1,14 @@
+{
+  "host": "172.233.152.148",
+  "port": 2222,
+  "username": "staging_acegroupki",
+  "password": "yQF6OeORfCvgbN6M",
+  "remotePath": "/www/wp-content",
+  "sshKeyPath": "C:\\Users\\Tyler\\.ssh\\acegroupki_website_ed25519",
+  "themePath": "wp-content/themes/acegroupki",
+  "pluginPaths": [
+    "wp-content/plugins/acegroupki-core",
+    "wp-content/plugins/acegroupki-forms"
+  ]
+}
+
