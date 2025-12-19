@@ -99,8 +99,14 @@ try {
         # Remove old theme directory
         $session.RemoveFiles($themeRemotePath).Check()
         
-        # Upload theme
-        $session.PutFiles($themeLocalPath, $themeRemotePath).Check()
+        # Upload theme with transfer options (file permissions)
+        $transferOptions = New-Object WinSCP.TransferOptions
+        $transferOptions.FilePermissions = New-Object WinSCP.FilePermissions
+        $transferOptions.FilePermissions.Octal = "0644"
+        $transferOptions.DirectoryPermissions = New-Object WinSCP.FilePermissions
+        $transferOptions.DirectoryPermissions.Octal = "0755"
+        
+        $session.PutFiles($themeLocalPath, $themeRemotePath, $False, $transferOptions).Check()
         Write-Host "Theme deployed successfully!" -ForegroundColor Green
     }
     
