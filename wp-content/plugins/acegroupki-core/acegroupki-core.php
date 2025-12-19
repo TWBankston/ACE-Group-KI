@@ -53,6 +53,16 @@ add_action('plugins_loaded', 'acegroupki_core_init');
  * Plugin activation hook
  */
 function acegroupki_core_activate() {
+    // Register CPT/taxonomies first so rewrite rules work
+    $cpt_projects = new ACEGroupKI_CPT_Projects();
+    $cpt_projects->register_cpt();
+    
+    $taxonomies = new ACEGroupKI_Taxonomies();
+    $taxonomies->register_taxonomies();
+    
+    // Auto-create pages
+    ACEGroupKI_Page_Setup::activate();
+    
     // Flush rewrite rules
     flush_rewrite_rules();
 }

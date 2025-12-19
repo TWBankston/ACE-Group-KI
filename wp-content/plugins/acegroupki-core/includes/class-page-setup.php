@@ -50,7 +50,43 @@ class ACEGroupKI_Page_Setup {
     public function init() {
         add_action('admin_menu', array($this, 'add_setup_page'));
         add_action('admin_init', array($this, 'handle_setup_action'));
+        add_action('admin_init', array($this, 'auto_create_pages_if_needed'));
         add_action('admin_notices', array($this, 'show_setup_notice'));
+    }
+
+    /**
+     * Automatically create pages if they haven't been created yet
+     * This runs on admin_init to ensure pages exist
+     */
+    public function auto_create_pages_if_needed() {
+        // Only run once - check if we've already auto-created
+        if (get_option('acegroupki_pages_created')) {
+            return;
+        }
+
+        // Only run for admins
+        if (!current_user_can('manage_options')) {
+            return;
+        }
+
+        // Create all pages automatically
+        $this->create_all_pages();
+        update_option('acegroupki_pages_created', true);
+
+        // Show a success notice
+        add_action('admin_notices', function() {
+            ?>
+            <div class="notice notice-success is-dismissible">
+                <p>
+                    <strong><?php _e('ACE Group KI:', 'acegroupki-core'); ?></strong>
+                    <?php _e('Site pages have been automatically created!', 'acegroupki-core'); ?>
+                    <a href="<?php echo admin_url('options-general.php?page=acegroupki-setup'); ?>">
+                        <?php _e('View setup', 'acegroupki-core'); ?>
+                    </a>
+                </p>
+            </div>
+            <?php
+        });
     }
 
     /**
@@ -292,10 +328,10 @@ class ACEGroupKI_Page_Setup {
      * Run on plugin activation
      */
     public static function activate() {
-        // Optional: Auto-create pages on activation
-        // $instance = new self();
-        // $instance->create_all_pages();
-        // update_option('acegroupki_pages_created', true);
+        // Auto-create pages on activation
+        $instance = new self();
+        $instance->create_all_pages();
+        update_option('acegroupki_pages_created', true);
     }
 
     /**
