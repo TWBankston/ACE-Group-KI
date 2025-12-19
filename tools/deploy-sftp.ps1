@@ -1,6 +1,12 @@
 # ACE Group KI Deployment Script (SFTP via OpenSSH)
 # Deploys theme and plugins to staging server
 # Only replaces OUR theme and plugins, not the entire folders
+#
+# IMPORTANT: This script uploads files INTO specific subdirectories:
+#   - Theme goes INTO /www/wp-content/themes/acegroupki/
+#   - Plugins go INTO /www/wp-content/plugins/{plugin-name}/
+#
+# It NEVER touches other themes or plugins on the server.
 
 param(
     [string]$ConfigFile = "deploy-config.local.json",
@@ -34,7 +40,7 @@ Write-Host "  ACE Group KI Deployment Script" -ForegroundColor Cyan
 Write-Host "============================================" -ForegroundColor Cyan
 Write-Host ""
 Write-Host "Server: $host_addr`:$port" -ForegroundColor Gray
-Write-Host "Remote: $remotePath" -ForegroundColor Gray
+Write-Host "Remote Base: $remotePath" -ForegroundColor Gray
 Write-Host ""
 
 # Determine what to deploy
@@ -56,9 +62,13 @@ Write-Host ""
 $batchFile = [System.IO.Path]::GetTempFileName()
 $batchContent = @()
 
-# Deploy theme (into themes/acegroupki folder only)
+# The theme name is fixed - we always deploy to "acegroupki"
+$themeRemoteFolder = "acegroupki"
+$themeRemotePath = "$remotePath/themes/$themeRemoteFolder"
+
+# Deploy theme (into themes/acegroupki folder only - NEVER to themes/ root)
 if ($deployTheme) {
-    Write-Host "[1/3] Theme: acegroupki" -ForegroundColor White
+    Write-Host "[1/3] Theme: $themeRemoteFolder" -ForegroundColor White
     
     if (-not (Test-Path $themeAbsPath)) {
         Write-Host "  ERROR: Theme path not found: $themeAbsPath" -ForegroundColor Red
@@ -66,25 +76,30 @@ if ($deployTheme) {
     }
 
     Write-Host "  Local:  $themeAbsPath" -ForegroundColor DarkGray
-    Write-Host "  Remote: $remotePath/themes/acegroupki" -ForegroundColor DarkGray
+    Write-Host "  Remote: $themeRemotePath" -ForegroundColor DarkGray
 
-    # Change to theme directory locally, then upload to remote theme folder
+    # CRITICAL: We must cd into the theme subfolder BEFORE uploading
+    # This ensures files go INTO acegroupki/ not INTO themes/
     $batchContent += "lcd `"$themeAbsPath`""
-    $batchContent += "-mkdir $remotePath/themes/acegroupki"
-    $batchContent += "cd $remotePath/themes/acegroupki"
+    $batchContent += "-mkdir $themeRemotePath"
+    $batchContent += "cd $themeRemotePath"
     $batchContent += "put -r ."
     
     Write-Host "  Status: Ready" -ForegroundColor Green
 }
 
-# Deploy plugins (only our plugins, inside plugins folder)
+# Deploy plugins (only our plugins - each goes into its own subfolder)
+# NEVER touches other plugins on the server
 if ($deployPlugins) {
     $pluginIndex = 2
+    $totalItems = 1 + $pluginPaths.Count
+    
     foreach ($pluginPath in $pluginPaths) {
         $pluginName = Split-Path $pluginPath -Leaf
         $pluginAbsPath = Join-Path $projectRoot $pluginPath
+        $pluginRemotePath = "$remotePath/plugins/$pluginName"
         
-        Write-Host "[$pluginIndex/3] Plugin: $pluginName" -ForegroundColor White
+        Write-Host "[$pluginIndex/$totalItems] Plugin: $pluginName" -ForegroundColor White
         
         if (-not (Test-Path $pluginAbsPath)) {
             Write-Host "  WARNING: Plugin path not found: $pluginAbsPath" -ForegroundColor Yellow
@@ -93,12 +108,13 @@ if ($deployPlugins) {
         }
 
         Write-Host "  Local:  $pluginAbsPath" -ForegroundColor DarkGray
-        Write-Host "  Remote: $remotePath/plugins/$pluginName" -ForegroundColor DarkGray
+        Write-Host "  Remote: $pluginRemotePath" -ForegroundColor DarkGray
         
-        # Change to plugin directory locally, create folder on remote, upload
+        # CRITICAL: cd into the plugin subfolder BEFORE uploading
+        # This ensures files go INTO the plugin folder, not into plugins/
         $batchContent += "lcd `"$pluginAbsPath`""
-        $batchContent += "-mkdir $remotePath/plugins/$pluginName"
-        $batchContent += "cd $remotePath/plugins/$pluginName"
+        $batchContent += "-mkdir $pluginRemotePath"
+        $batchContent += "cd $pluginRemotePath"
         $batchContent += "put -r ."
         
         Write-Host "  Status: Ready" -ForegroundColor Green
@@ -137,12 +153,19 @@ Write-Host "============================================" -ForegroundColor Cyan
 Write-Host ""
 Write-Host "Deployed to:" -ForegroundColor White
 if ($deployTheme) {
-    Write-Host "  Theme:   /www/wp-content/themes/acegroupki" -ForegroundColor Gray
+    Write-Host "  Theme:  $themeRemotePath" -ForegroundColor Gray
 }
 if ($deployPlugins) {
-    Write-Host "  Plugin:  /www/wp-content/plugins/acegroupki-core" -ForegroundColor Gray
-    Write-Host "  Plugin:  /www/wp-content/plugins/acegroupki-forms" -ForegroundColor Gray
+    foreach ($pluginPath in $pluginPaths) {
+        $pluginName = Split-Path $pluginPath -Leaf
+        Write-Host "  Plugin: $remotePath/plugins/$pluginName" -ForegroundColor Gray
+    }
 }
+Write-Host ""
+Write-Host "What was NOT touched:" -ForegroundColor DarkYellow
+Write-Host "  - Other themes in /www/wp-content/themes/" -ForegroundColor DarkGray
+Write-Host "  - Other plugins in /www/wp-content/plugins/" -ForegroundColor DarkGray
+Write-Host "  - WordPress core files" -ForegroundColor DarkGray
 Write-Host ""
 Write-Host "Next steps:" -ForegroundColor White
 Write-Host "  1. Log into WordPress: https://acegroupki.wordkeeper.net/wp-admin" -ForegroundColor Gray
